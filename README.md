@@ -2,6 +2,7 @@
 Website dedicated to Drakador possibly as a form of Resume. I dont really know, I am still deciding.
 
 LEGAL STUFF NOBODY CARES ABOUT:
+
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
