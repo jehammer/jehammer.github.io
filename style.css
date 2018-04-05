@@ -31,4 +31,21 @@ li a:hover {
 
 body{
     background-color:darkslategray;
+    color:white; 
+}
+
+#lart{
+    width:50%;
+    float:left;
+}
+
+#mart{
+    width:39%;
+    float:middle;
+    margin: auto;
+}
+
+#rart{
+    width:10%;
+    float:right;
 }
