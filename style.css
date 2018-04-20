@@ -34,18 +34,33 @@ body{
     color:white; 
 }
 
-#lart{
-    width:50%;
-    float:left;
+ #mart{
+    width:5%;
+    float:center;
+    margin:auto;
 }
 
-#mart{
-    width:39%;
-    float:middle;
+#gart{
+    width:40%;
+    float:center;
     margin: auto;
 }
 
-#rart{
-    width:10%;
+/* #rart{
+    width:3%;
     float:right;
+} */
+
+#full{
+    margin:auto;
+    width:30%
+}
+
+a {
+	color: #cfcfcf;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
 }
