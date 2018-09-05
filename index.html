@@ -12,20 +12,23 @@
         <script>
         $(document).ready(function(){
 
-            $('body').fadeOut(0).delay(500).fadeIn(2000);
+            $('#hide').hide();
             $('but')
             //plan: make entrance to side say "A new person enters the webpage" to parody "a new hand touches the beacon"
             $('#but').on('click', function(){
-                $('#body').toggle('body');
+                $('#body').show();
 
             });
-         
+         function buttonFunction(){
+             $('#hide').show();
+         };
          });
         </script>
     </head>
 
     <body>
-        
+        <button onClick="buttonFuction()"></button>
+        <section id="hide">
         <nav>
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
@@ -36,8 +39,6 @@
                 <li><a href="mailto:jebelfor@gmail.com">Contact</a></li>
             </ul>
         </nav>
- 
-        <button id="but"></button>
 
 
         <!-- <article id="lart">
@@ -74,6 +75,7 @@
 
             </p>
         </article>
+    </section>
 
     </body>
 </html>
