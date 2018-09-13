@@ -15,19 +15,16 @@
             $('#hide').hide();
             $('but')
             //plan: make entrance to side say "A new person enters the webpage" to parody "a new hand touches the beacon"
-            $('#but').on('click', function(){
-                $('#body').show();
-
+            $('#but').click( function(){
+                $('#hide').fadeIn(1000);
+                $('#but').fadeOut(1000);
             });
-         function buttonFunction(){
-             $('#hide').show();
-         };
          });
         </script>
     </head>
 
     <body>
-        <button onClick="buttonFuction()"></button>
+        <button id = "but">Button Works</button>
         <section id="hide">
         <nav>
             <ul>
@@ -39,8 +36,6 @@
                 <li><a href="mailto:jebelfor@gmail.com">Contact</a></li>
             </ul>
         </nav>
-
-
         <!-- <article id="lart">
             <a class="twitter-timeline" data-width="250" data-height="600" data-dnt="true" data-theme="light" href="https://twitter.com/Drakador">Tweets by Drakador</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
