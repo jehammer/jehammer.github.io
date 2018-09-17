@@ -16,7 +16,8 @@
             $('but')
             //plan: make entrance to side say "A new person enters the webpage" to parody "a new hand touches the beacon"
             $('#but').click( function(){
-                $('#hide').fadeIn(1000);
+                $('#hide').delay(1000).fadeIn(1000);
+                
                 $('#but').fadeOut(1000);
             });
          });
