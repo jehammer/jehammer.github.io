@@ -65,8 +65,10 @@ a:hover {
 	text-decoration: none;
 }
 
-#but{
-    z-index:5;
-    position: relative;
+#butdiv{
+    
+    text-align: center;
+    margin:0 auto;  
+    vertical-align: middle;
     
 }
