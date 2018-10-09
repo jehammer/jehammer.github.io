@@ -1,7 +1,5 @@
 # Draksite
-Website dedicated to Drakador possibly as a form of Resume. I dont really know, I am still deciding.
-
-LEGAL STUFF NOBODY CARES ABOUT:
+Personal portfolio webside coded mostly from scratch.
 
 This is free and unencumbered software released into the public domain.
 
