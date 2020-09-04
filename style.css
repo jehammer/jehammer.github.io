@@ -1,3 +1,15 @@
+#leftbox { 
+float:left;  
+background:Red; 
+width:50%;  
+} 
+#rightbox{ 
+	 float:right; 
+	 background:blue; 
+	 width:50%; 
+} 
+            
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -34,22 +46,17 @@ body{
     color:white; 
 }
 
- #mart{
-    width:5%;
-    float:center;
+ #left{
+    width:15%;
+    float: left;
     margin:auto;
 }
 
-#gart{
+#right{
     width:40%;
-    float:center;
+    float: right;
     margin: auto;
 }
-
-/* #rart{
-    width:3%;
-    float:right;
-} */
 
 #full{
     margin:auto;
