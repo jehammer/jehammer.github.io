@@ -2,6 +2,7 @@
 float:left;  
 background:Red; 
 width:50%;  
+
 } 
 #rightbox{ 
 	 float:right; 
@@ -10,7 +11,7 @@ width:50%;
 } 
             
 
-ul {
+#navtop {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -21,7 +22,7 @@ ul {
     top: 0;
 }
 
-li {
+#litop {
     float: left;
 }
 
