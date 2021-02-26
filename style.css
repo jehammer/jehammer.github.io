@@ -1,25 +1,27 @@
 #leftbox { 
 float:left;  
-background:Red; 
+/*background:Red; */
 width:50%;  
 
 } 
 #rightbox{ 
 	 float:right; 
-	 background:blue; 
+	 /*background:blue; */
 	 width:50%; 
 } 
             
 
 #navtop {
     list-style-type: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
     overflow: hidden;
-    background-color: black; /*#333*/
+    /*background-color: black; /*#333*/
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+    width: 22%;
+    text-align: center;
 }
 
 #litop {
@@ -43,8 +45,8 @@ li a:hover {
 }
 
 body{
-    background-color:darkslategray;
-    color:white; 
+    background-color:rgb(30, 53, 53);
+    color:rgb(230, 210, 210); 
 }
 
  #left{
@@ -72,4 +74,15 @@ a {
 
 a:hover {
 	text-decoration: none;
+}
+
+#wraptest{
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    margin: auto
+}
+
+#skills{
+
 }
