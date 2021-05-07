@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <meta name="keywords" content="Josua Belfor, Joshua, Belfor, Drakador, Drakon, Drakidor" />
+        <meta name="keywords" content="Josua Belfor, Joshua, Belfor, Drakador, Drakon, Drakidor, Joshua Hammer, Hammer" />
         <meta name="description" content="Website dedicated to Joshua "Drakador" Belfor. Entirely free."/>
         <meta http-equiv="content-type" content="text/html"; charset= "utf-8" /> 
         <title>Joshua Belfor</title>
@@ -10,7 +10,7 @@
         <script src="jquery.js"></script>
         <script>
         $(document).ready(function(){
-        }
+        })
         </script>
     </head>
     <style>
@@ -18,15 +18,24 @@
         
     </style>
     <body>
-    <nav>
-        <ul id="navtop">
-            <li id="litop"><a class="active" href="index.html">Home</a></li>
-            <li id="litop"><a href="portfolio.html">Portfolio</a></li>
-            <li id="litop"><a href="https://github.com/Drakador">Github</a></li>
-            <li id="litop"><a href="https://www.linkedin.com/in/joshua-belfor/">LinkedIn</a></li>
-            <li id="litop"><a href="mailto:jebelfor@gmail.com">Contact</a></li>
-        </ul>
-    </nav>
+        <div class="navbar" id="navtop"> <!--New Nav-->
+            <a class="active" href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="https://github.com/Drakador">Github</a>
+            <a href="https://www.linkedin.com/in/joshua-belfor/">LinkedIn</a>
+            <a href="mailto:jebelfor@gmail.com">Contact</a>
+            <div class="dropdown">
+              <button class="dropbtn">Resume and Certifications
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="work/Joshua Belfor Resume.pdf" target="_blank">Resume</a>
+                <a href="work/Joshua Belfor Access 2016 Cert.pdf" target="_blank">Microsoft Access 2016</a>
+                <a href="work/Ladder Cert.pdf" target="_blank">Ladder Safety</a>
+              </div>
+            </div>
+        </div> 
+
     <div style="text-align: center; font-size: 30px">Joshua Belfor</div>
     <article id="full">
         
@@ -59,7 +68,7 @@
     </article>
 
     <article id="leftbox">
-        <p style="">
+        <p>
             I started programming back when I was in Middle School. I started out with Scratch, learning drag-and-drop style programming. However as time went on I began
             to dabble a bit in Python 2. High School was where my programming really took off. I learned Python 2 (later we swtiched to 3), HTML5, CSS3, and even Java.
         </p>
