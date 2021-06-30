@@ -1,4 +1,5 @@
-# Draksite
-Personal portfolio webside coded mostly from scratch. I am looking into the possibility of licenses for this repo should any apply.
+## Drakador.github.io
 
-As of the current moment, feel free to fork and remove the information and images related to me so that you may use the HTML and CSS to further your own projects. 
+This website is available [right here](https://drakador.github.io/).
+
+All projects that I work on will be linked into my github site 
