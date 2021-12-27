@@ -1,10 +1,22 @@
 ul.no-bullets {
     list-style-type: none; /* Remove bullets */
   }
-#outer {
+  .navbar.navbar-expand-lg.bg-dark.navbar-dark a{
+    color:white;
+  }
+ 
+  .hidden{
+    display: none;
+  }
+
+  iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 150vh;        /* Viewport-relative units */
     width: 100%;
-    text-align: center;
-  }
-#inner {
-    margin: auto;
-  }
+}
+nav{
+  display: inline-block;
+  
+}
