@@ -2,4 +2,4 @@
 ### Personal Portfolio Website
 This website is available [right here](https://drakador.github.io/).
 
-Resume is available for download via website under the 'Downloads' dropdown menu or can be directly obtained in the work folder. Direct links to any repo websites I make will be available in the portfolio webpage under the 'Works' dropdown menu.
+Website is design to be on the more minimalistic side, friendly for mobile and desktop with simple JavaScript and CSS in part thanks to Bootstrap 5. 
