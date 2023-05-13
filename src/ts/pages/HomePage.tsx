@@ -1,9 +1,9 @@
 import React from 'react';
-import '../css/App.css';
-import Projects from './Projects';
-import Header from './Header'
-import About from './About'
-import Navigation from './Navigation'
+import '../../css/App.css';
+import Projects from '../components/Projects';
+import Header from '../components/Header'
+import About from '../components/About'
+import Navigation from '../components/Navigation'
 
 
 interface Project {
@@ -22,9 +22,9 @@ const projects: Project[] = [
   },
 ];
 
-function App() {
+function HomePage() {
   return (
-    <div className="app">
+    <div className="main">
       <Navigation />
       <Header title="Joshua Hammer" subtitle="Software Developer" />
       <About
@@ -36,30 +36,4 @@ function App() {
   );
 }
 
-export default App;
-
-
-
-/*
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;*/
+export default HomePage;

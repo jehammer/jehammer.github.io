@@ -93,8 +93,8 @@
 }
 
 body{
-  background-color: darkslategrey;
-  color: white;
+  background-color: darkslategrey !important;
+  color: white !important;
 }
 a{
   color:green;
