@@ -10,7 +10,7 @@ const Navbar: React.FC<{ onSelect: (option: string) => void }> = ({ onSelect }) 
     <nav className="d-flex justify-content-center">
       {options.map((option) => (
         <div key={option} className='PDFDiv'>
-          <button className="btn btn-primary" onClick={() => onSelect(option)}>{option}</button>
+          <button className="btn btn-primary" onClick={() => onSelect(option)}>{option.replace('Joshua Hammer','')}</button>
         </div>
       ))}
     </nav>
