@@ -15,7 +15,7 @@ interface Props {
 const Projects: React.FC<Props> = ({ projects }) => {
   return (
     <div className="portfolio">
-      <h2>Projects</h2>
+      <h2>Check out some of my projects</h2>
       <div className="projects">
         {projects.map((project, index) => (
           <div className="project" key={index}>
