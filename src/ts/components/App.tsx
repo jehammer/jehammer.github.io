@@ -2,7 +2,7 @@ import React from 'react';
 import '../../css/App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
-import Certifications from '../pages/CertificationPage';
+import Documents from '../pages/DocumentsPage';
 
 
 const App: React.FC = () => {
@@ -10,7 +10,7 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/certifications" element={<Certifications />} />
+        <Route path="/documents" element={<Documents />} />
       </Routes>
     </Router>
   );
