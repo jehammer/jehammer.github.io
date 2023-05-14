@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../css/App.css';
 import Projects from '../components/Projects';
-import Header from '../components/Header'
 import About from '../components/About'
 import Navigation from '../components/Navigation'
 
@@ -26,10 +25,11 @@ function HomePage() {
   return (
     <div className="main">
       <Navigation />
-      <Header title="Joshua Hammer" subtitle="Software Developer" />
       <About
         image="./images/RoundFace.png"
-        bio="Hey pardon the messiness here, still learning, exploring, and designing!"
+        bio="This page may be basic now, but just you wait!"
+        title="Joshua Hammer" 
+        subtitle="Software Developer"
       />
       <Projects projects={projects} />
     </div>

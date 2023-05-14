@@ -2,15 +2,23 @@ import React from 'react';
 import '../../css/About.css';
 
 interface Props {
+  title: string;
+  subtitle: string;
   image: string;
   bio: string;
 }
 
-const About: React.FC<Props> = ({ image, bio }) => {
+const About: React.FC<Props> = ({ title, subtitle, image, bio }) => {
   return (
-    <div className="about">
-      <img src={image} alt="Profile" />
-      <p>{bio}</p>
+    <div>
+      <div className="about">
+        <img src={image} alt="Profile" />
+        <div className="header">
+          <h1>{title}</h1>
+          <p>{subtitle}</p>
+          <p>{bio}</p>
+        </div>
+      </div>
     </div>
   );
 };
