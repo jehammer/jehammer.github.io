@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PdfViewer from '../components/PDFViewer';
 import Navigation from '../components/Navigation';
-import '../../css/PDFPage.css'
+import '../../css/DocumentsPage.css'
 
 const Navbar: React.FC<{ onSelect: (option: string) => void }> = ({ onSelect }) => {
   const options = ['Joshua Hammer Resume', 'Joshua Hammer MS Cert'];
