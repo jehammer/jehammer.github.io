@@ -19,6 +19,12 @@ const projects: Project[] = [
     imageUrl: './images/kynareth.png',
     projectUrl: 'https://github.com/jehammer/BOKBot',
   },
+  {
+    name: 'Personal Website',
+    description: 'The very website you are on now! Built using React TypeScript for me to experiment around with React Web Development.',
+    imageUrl: './images/MyRobo.png',
+    projectUrl: 'https://github.com/jehammer/jehammer.github.io',
+  },
 ];
 
 function HomePage() {
@@ -27,7 +33,7 @@ function HomePage() {
       <Navigation />
       <About
         image="./images/RoundFace.png"
-        bio="This page may be basic now, but just you wait!"
+        bio="A passionate software developer dedicated to learning and producing quality code."
         title="Joshua Hammer" 
         subtitle="Software Developer"
       />
