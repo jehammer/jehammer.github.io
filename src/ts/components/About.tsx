@@ -16,7 +16,7 @@ const About: React.FC<Props> = ({ title, subtitle, image, bio }) => {
         <div className="header">
           <h1>{title}</h1>
           <p>{subtitle}</p>
-          <p>{bio}</p>
+          <p className="bio">{bio}</p>
         </div>
       </div>
     </div>
