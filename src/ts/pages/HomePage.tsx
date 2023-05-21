@@ -29,15 +29,19 @@ const projects: Project[] = [
 
 function HomePage() {
   return (
-    <div className="main">
-      <Navigation />
-      <About
-        image="./images/RoundFace.png"
-        bio="A passionate software developer dedicated to learning and producing quality code."
-        title="Joshua Hammer" 
-        subtitle="Software Developer"
-      />
-      <Projects projects={projects} />
+    <div className="frame">
+      <div className="terminal">
+        <div className="terminal-container">
+          <Navigation />
+          <About
+            image="./images/RoundFace.png"
+            bio="A passionate software developer dedicated to learning and producing quality code."
+            title="Joshua Hammer" 
+            subtitle="Software Developer"
+          />
+          <Projects projects={projects} />
+        </div>
+      </div>
     </div>
   );
 }
