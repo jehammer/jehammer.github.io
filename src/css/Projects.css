@@ -30,3 +30,19 @@
 .project p {
     text-align: left;
 }
+
+a:link {
+    color: cyan;
+}
+
+a:visited {
+    color: pink;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: blue;
+}
