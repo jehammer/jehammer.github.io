@@ -31,18 +31,18 @@
     text-align: left;
 }
 
-a:link {
+.projectLink:link {
     color: cyan;
 }
 
-a:visited {
+.projectLink:visited {
     color: pink;
 }
 
-a:hover {
+.projectLink:hover {
     color: white;
 }
 
-a:active {
+.projectLink:active {
     color: blue;
 }

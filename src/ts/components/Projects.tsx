@@ -19,7 +19,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
       <div className="projects">
         {projects.map((project, index) => (
           <div className="project" key={index}>
-            <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
+            <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="projectLink">
               <img src={project.imageUrl} alt={project.name} />
               <h3>{project.name}</h3>
             </a>
