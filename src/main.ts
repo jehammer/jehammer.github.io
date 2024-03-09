@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 // @ts-ignore
 import router from './router/index.js';
 import ContextMenu from '@imengyu/vue3-context-menu'
+// @ts-ignore
+import Notifications from '@kyvg/vue3-notification';
 
 import '@imengyu/vue3-context-menu/lib/vue3-context-menu.css'
 import 'primevue/resources/themes/viva-dark/theme.css';
@@ -21,5 +23,6 @@ const app = createApp(App);
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(ContextMenu);
 app.use(PrimeVue);
+app.use(Notifications);
 app.use(router);
 app.mount('#app');
