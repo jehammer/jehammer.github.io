@@ -1,18 +1,18 @@
 <template>
-  <div>
+  <div class="wrapper-class">
+    <div v-if="showPage">
+      <p>You can see me!</p>
+    </div>
+    <div class='toolbox'>
+    <img ref="hammer" src="/images/hammer.png" alt="hammer" class="hammer" />
+  </div>
   <context-menu v-model:show=show :options=options>
     <context-menu-item label="Projects" @click="goToPage('projects')" />
     <context-menu-sperator /><!--use this to add sperator-->
     <context-menu-group label="Menu with child">
-      <context-menu-item label="Item1" @click="" />
-      <!--<context-menu-group label="Child with v-for 50">
-        <context-menu-item v-for="index of 50" :key="index" :label="'Item3-'+index" @click="onMenuClick(index + 3)" />
-      </context-menu-group> -->
+      <context-menu-item label="Resume" @click="" />
     </context-menu-group>
   </context-menu>
-  </div>
-  <div class='toolbox'>
-    <img ref="hammer" src="/images/hammer.png" alt="hammer" class="hammer" />
   </div>
 </template>
     
@@ -31,6 +31,8 @@
         x: 500,
         y: 200
       });
+      const showPage = ref(false);
+      const cursor = ref('');
 
 
       const goToPage = (page : string) => {
@@ -53,6 +55,7 @@
         hammerElement.classList.add('animate__animated', 'animate__rotateOutUpLeft');
         setTimeout(() =>{
           hammerElement.remove();
+          showPage.value = true;
         }, 1000)
         });
 
@@ -61,7 +64,17 @@
     }
 
     const docSetup = () => {
+      cursor.value = document.documentElement.style.cursor;
       document.addEventListener('contextmenu', onContextMenu);
+      document.addEventListener('mousedown', function(event) {
+        if (event.button === 0) { // Left mouse button is 0
+          document.documentElement.style.cursor = 'url(/images/cursor-down.png), auto';
+        }
+      });
+      document.addEventListener('mouseup', function() {
+        // Reset cursor to hammer
+        document.documentElement.style.cursor = cursor.value;
+      });
     }
 
     onMounted(() =>{
@@ -76,6 +89,8 @@
       goToPage,
       show,
       options,
+      showPage,
+      cursor
     }
   }
 }
