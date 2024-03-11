@@ -1,7 +1,7 @@
 <template>
   <div class="projects-title">
     <h2>
-      Projects.
+      Projects
     </h2>
   </div>
   <v-container>
