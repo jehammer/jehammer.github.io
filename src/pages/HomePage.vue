@@ -1,28 +1,31 @@
 <template>
   <div class="wrapper-class">
-    <div v-if="showPage">
-      <p>You can see me!</p>
-    </div>
-    <div class='toolbox'>
-    <img ref="hammer" src="/images/hammer.png" alt="hammer" class="hammer" />
-  </div>
-  <context-menu v-model:show=show :options=options>
-    <context-menu-item label="Projects" @click="goToPage('projects')" />
-    <context-menu-sperator /><!--use this to add sperator-->
-    <context-menu-group label="Menu with child">
-      <context-menu-item label="Resume" @click="" />
-    </context-menu-group>
-  </context-menu>
+    <WIP />
+    <!--<div class='toolbox'>
+      <img ref="hammer" src="/images/hammer.png" alt="hammer" class="hammer" />
+    </div>-->
+    <intro-section />
+    <project-section />
+    <context-menu v-model:show=show :options=options>
+      <context-menu-item label="Projects" @click="goToPage('projects')" />
+      <context-menu-sperator /><!--use this to add sperator-->
+      <context-menu-group label="Quick Links">
+        <context-menu-item label="Download Resume" @click="" />
+      </context-menu-group>
+    </context-menu>
   </div>
 </template>
     
 <script lang="ts">
   import { onMounted, ref } from 'vue';
   import { MenuOptions } from '@imengyu/vue3-context-menu';
+  import ProjectSection from '../components/ProjectSection.vue';
+  import IntroSection from '../components/IntroSection.vue';
+  import WIP from '../components/WIP.vue';
   //@ts-ignore
   import router  from '../router/index.js';
   export default {
-    components: {  },
+    components: {  ProjectSection, IntroSection, WIP },
     setup() {
       const show = ref(false);
       const options = ref<MenuOptions>({
@@ -36,7 +39,8 @@
 
 
       const goToPage = (page : string) => {
-        router.push(page);
+        //router.push(page);
+        document.getElementById(page)?.scrollIntoView({behavior: 'smooth'});
       }
 
       const onContextMenu = (e : MouseEvent) => {
@@ -47,7 +51,7 @@
         options.value.y = e.y;
       }
 
-    const animateHammer = () => {
+    /*const animateHammer = () => {
 
       const hammerElement = document.querySelector('.hammer');
       if(hammerElement){
@@ -61,7 +65,7 @@
 
         hammerElement.classList.add('animate__animated', 'animate__rotateInDownLeft');
       }
-    }
+    }*/
 
     const docSetup = () => {
       cursor.value = document.documentElement.style.cursor;
@@ -79,11 +83,11 @@
 
     onMounted(() =>{
       docSetup();
-      animateHammer();
+      //animateHammer();
     })
 
     return {
-      animateHammer,
+      //animateHammer,
       onContextMenu,
       docSetup,
       goToPage,
@@ -126,4 +130,4 @@
       left: 50%; 
       transform: translate(-50%, -50%);
     }
-  </style>./HomePage.vue
+  </style>./HomePage.vue./ProjectSection.vue/index.js
