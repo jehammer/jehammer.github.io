@@ -7,10 +7,11 @@
     <intro-section />
     <project-section />
     <context-menu v-model:show=show :options=options>
-      <context-menu-item label="Projects" @click="goToPage('projects')" />
+      <context-menu-item label="Change Cursor" @click="changeCursor()" />
+      <!--<context-menu-item label="Projects" @click="goToPage('projects')" />-->
       <context-menu-sperator /><!--use this to add sperator-->
       <context-menu-group label="Quick Links">
-        <context-menu-item label="Download Resume" @click="" />
+        <context-menu-item label="Download Resume (Coming Soon)" @click="" />
       </context-menu-group>
     </context-menu>
   </div>
@@ -36,6 +37,7 @@
       });
       const showPage = ref(false);
       const cursor = ref('');
+      const hammerCursor = ref();
 
 
       const goToPage = (page : string) => {
@@ -51,50 +53,53 @@
         options.value.y = e.y;
       }
 
-    /*const animateHammer = () => {
-
-      const hammerElement = document.querySelector('.hammer');
-      if(hammerElement){
-        hammerElement.addEventListener('animationend', () => {
-        hammerElement.classList.add('animate__animated', 'animate__rotateOutUpLeft');
-        setTimeout(() =>{
-          hammerElement.remove();
-          showPage.value = true;
-        }, 1000)
-        });
-
-        hammerElement.classList.add('animate__animated', 'animate__rotateInDownLeft');
-      }
-    }*/
-
-    const docSetup = () => {
-      cursor.value = document.documentElement.style.cursor;
-      document.addEventListener('contextmenu', onContextMenu);
-      document.addEventListener('mousedown', function(event) {
-        if (event.button === 0) { // Left mouse button is 0
+    const mouseDownFunction = (event: MouseEvent) => {
+      if (event.button === 0) { // Left mouse button is 0
           document.documentElement.style.cursor = 'url(/images/cursor-down.png), auto';
         }
-      });
-      document.addEventListener('mouseup', function() {
-        // Reset cursor to hammer
-        document.documentElement.style.cursor = cursor.value;
-      });
+    }
+
+    const mouseUpFunction = () => {
+      document.documentElement.style.cursor = cursor.value;
+    }
+
+    const cursorSetup = () => {
+      document.documentElement.style.cursor = 'url(/images/cursor-main.png), auto';
+      cursor.value = document.documentElement.style.cursor; // Only works fast enough if I do it this way?
+      document.addEventListener('contextmenu', onContextMenu);
+      document.addEventListener('mousedown', mouseDownFunction, true);
+      document.addEventListener('mouseup', mouseUpFunction, true);
+      hammerCursor.value = true;
+    }
+
+    const changeCursor = () => {
+      if(hammerCursor.value){
+        // Set back to normal cursor
+        document.removeEventListener('mousedown', mouseDownFunction, true)
+        document.removeEventListener('mouseup', mouseUpFunction, true)
+        document.documentElement.style.cursor = 'auto';
+        cursor.value = 'auto';
+        hammerCursor.value = false;
+      } else {
+        // Set back to Hammer cursor
+        cursorSetup();
+      }     
     }
 
     onMounted(() =>{
-      docSetup();
-      //animateHammer();
+      cursorSetup();
     })
 
     return {
-      //animateHammer,
       onContextMenu,
-      docSetup,
+      cursorSetup,
       goToPage,
+      changeCursor,
       show,
       options,
       showPage,
-      cursor
+      cursor,
+      hammerCursor
     }
   }
 }
