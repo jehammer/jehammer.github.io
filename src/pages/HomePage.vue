@@ -20,6 +20,7 @@
 <script lang="ts">
   import { onMounted, ref } from 'vue';
   import { MenuOptions } from '@imengyu/vue3-context-menu';
+  import { notify } from "@kyvg/vue3-notification";
   import ProjectSection from '../components/ProjectSection.vue';
   import IntroSection from '../components/IntroSection.vue';
   import WIP from '../components/WIP.vue';
@@ -88,6 +89,9 @@
 
     onMounted(() =>{
       cursorSetup();
+      setTimeout(() =>{
+        notify({ type: "info", title: 'Welcome!', text: "Right-Click to access the custom menu! You can change cursor there." });
+      }, 1000)
     })
 
     return {
