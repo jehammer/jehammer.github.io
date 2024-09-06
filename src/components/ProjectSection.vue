@@ -15,11 +15,11 @@
                 BOKBot
               </v-card-title>
               <v-card-subtitle>
-                Python, Yaml, MongoDB, RabbitMQ
+                Python, Yaml, MongoDB
               </v-card-subtitle>
             </v-card-item>
             <v-card-text class="text-caption">
-              Discord Bot designed to manage rosters of players for endgame content and provide other functions for user engagement.
+              Discord Bot designed to manage rosters of players for endgame content and provide other functions for user engagement. Moving to AWS currently.
             </v-card-text>
             <v-card-actions>
               <v-chip clickable href="https://github.com/jehammer/BOKBot" target="_blank" class="d-flex align-center" color="white" variant="outlined">
@@ -36,11 +36,11 @@
                 Bridge
               </v-card-title>
               <v-card-subtitle>
-                TypeScript, MongoDB, Express, RabbitMQ
+                TypeScript, Rust, AWS, CDK, SQS, Lambda
               </v-card-subtitle>
             </v-card-item>
             <v-card-text class="text-caption">
-              REST API designed to communicate with front-end website to allow for engagement with BOKBot by sending messages via RabbitMQ.
+              REST API designed to communicate with front-end website to allow for engagement with BOKBot by sending messages via SQS.
             </v-card-text>
             <v-card-actions>
               <v-chip clickable href="https://github.com/Breath-Of-Kynareth/bridge" target="_blank" class="d-flex align-center" color="white" variant="outlined">
