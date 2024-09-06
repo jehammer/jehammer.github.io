@@ -6,7 +6,7 @@
     </div>-->
     <intro-section />
     <project-section />
-    <context-menu v-model:show=show :options=options>
+    <context-menu v-model:show=showMenu :options=options>
       <context-menu-item label="Change Cursor" @click="changeCursor()" />
       <!--<context-menu-item label="Projects" @click="goToPage('projects')" />-->
       <context-menu-sperator /><!--use this to add sperator-->
@@ -29,7 +29,7 @@
   export default {
     components: {  ProjectSection, IntroSection, WIP },
     setup() {
-      const show = ref(false);
+      const showMenu = ref(false);
       const options = ref<MenuOptions>({
         zIndex: 3,
         minWidth: 230,
@@ -49,7 +49,7 @@
       const onContextMenu = (e : MouseEvent) => {
         e.preventDefault();
         //Show component mode menu
-        show.value = true;
+        showMenu.value = true;
         options.value.x = e.x;
         options.value.y = e.y;
       }
@@ -99,7 +99,7 @@
       cursorSetup,
       goToPage,
       changeCursor,
-      show,
+      showMenu,
       options,
       showPage,
       cursor,
