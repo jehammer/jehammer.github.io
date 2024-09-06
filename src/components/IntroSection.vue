@@ -1,10 +1,12 @@
 <template>
-  <div id='intro' class="intro">
-    <div class="intro-top">
-      <h1>Joshua Hammer</h1><h1 class="intro-hammer">&#128296;</h1>
+  <div class="intro">
+    <div id='intro-top' :class="introTop" @animationend="animateHammer">
+        <h1>Joshua Hammer</h1><h1 id="intro-hammer" :class="introHammer" :style="{ visibility: isVisible ? 'visible' : 'hidden' }">&#128296;</h1>
     </div>
-    <h2>Software Developer</h2>
-    <p>Backend Development is my game.</p>
+    <div id="intro-bottom" :class="introBottom">
+      <h2>Software Developer</h2>
+      <p>Backend Development is my game.</p>
+    </div>
   </div>
     <!--<div class="card">
         <Splitter style="height: 300px" class="mb-5">
@@ -17,61 +19,83 @@
 <script lang="ts">
 //import Splitter from 'primevue/splitter';
 //import SplitterPanel from 'primevue/splitterpanel';
-import { onMounted } from 'vue';
-  export default {
-    components: { },
-    setup() {
+import { onMounted, ref } from 'vue';
+export default {
+  components: { },
+  setup() {
+;
+    const introTop = ref('animate__animated animate__zoomInLeft');
+    const introBottom = ref('animate__animated animate__zoomInRight');
+    const introHammer = ref();
+    const isVisible = ref(false);
 
-      const animateHammer = () => {
-      const hammerElement = document.querySelector('.intro-hammer');
-      if(hammerElement){
-        hammerElement.classList.add('animate__animated', 'animate__rotateInDownRight');
-      };
+    const animateHammer = () => {
+      introHammer.value = 'animate__animated animate__rotateInDownRight';
+      isVisible.value = true;
     }
 
-      const loadInAnimation = () => {
-        const introGroup = document.querySelector('.intro');
-        if(introGroup){
-          introGroup.classList.add('animate__animated', 'animate__fadeInUp');
-        }
-        animateHammer();
-      }
 
-      onMounted(() =>{
-        loadInAnimation();
-      })
+    onMounted(() =>{
+    })
 
 
-      return {
-        loadInAnimation,
-        animateHammer,
+    return {
+      animateHammer,
+      introTop,
+      introBottom,
+      introHammer,
+      isVisible
 
-      }
     }
   }
+}
 </script>
     
 <style scoped>
-  .intro {
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#intro-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#intro-bottom h2,
+#intro-bottom p {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  #intro-top {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  #intro-top {
+    text-align: center;
+    display: inline-block;
   }
 
-  .intro h1 {
-    margin-top: 0;
+  #intro-hammer {
+    display: inline-block;
   }
+}
 
-  @media (min-width: 768px) {
-    .intro-top {
-      display: flex;
-    }
-  }
-  @media (max-width: 767px) {
-    .intro-top {
-      text-align: center;
-    }
-  }
 </style>./IntroSection.vue
