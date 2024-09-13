@@ -57,7 +57,7 @@
                 BOK Website
               </v-card-title>
               <v-card-subtitle>
-                TypeScript, Vue3, Axios
+                TypeScript, Vue3
               </v-card-subtitle>
             </v-card-item>
             <v-card-text class="text-caption">
