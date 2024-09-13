@@ -1,9 +1,5 @@
 <template>
   <div class="wrapper-class">
-    <!--<WIP />
-    <div class='toolbox'>
-      <img ref="hammer" src="/images/hammer.png" alt="hammer" class="hammer" />
-    </div>-->
     <intro-section />
     <project-section />
     <context-menu v-model:show=showMenu :options=options>
