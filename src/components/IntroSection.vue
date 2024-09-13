@@ -4,8 +4,8 @@
         <h1>Joshua Hammer</h1><h1 id="intro-hammer" :class="introHammer" :style="{ visibility: isVisible ? 'visible' : 'hidden' }">&#128296;</h1>
     </div>
     <div id="intro-bottom" :class="introBottom">
-      <h2>Software Developer</h2>
-      <p>Backend Development is my game.</p>
+      <h2>Software Enginner</h2>
+      <p>The best way to squash bugs, is with a Hammer!</p>
     </div>
   </div>
     <!--<div class="card">
@@ -70,7 +70,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: .25rem;
+  margin-bottom: 1rem;
 }
 
 #intro-bottom h2,
