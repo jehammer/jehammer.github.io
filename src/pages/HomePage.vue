@@ -3,7 +3,10 @@
     <nav class="st-menu st-effect" id="menu">
       <h2>Menu</h2>
       <ul @click="closeMenuFromItem">
-        <li><a href="#" @click="changeCursor()">Change Cursor</a></li>
+        <li><Button @click="changeCursor()" label="Change Cursor" raised /></li>
+        <li><a href="https://github.com/jehammer" target="_blank"> <font-awesome-icon :icon="['fab', 'github']"/> GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/joshua-hammer/" target="_blank"> <font-awesome-icon :icon="['fab', 'linkedin']" /> LinkedIn</a></li>
+        <li><a href="https://bsky.app/profile/thehammer.dev" target="_blank"> <font-awesome-icon :icon="['fab', 'bluesky']" /> BlueSky</a></li>
       </ul>
     </nav>
 
@@ -25,6 +28,8 @@
 
 <script setup lang="ts">
   import { ref, onMounted, onUnmounted } from 'vue';
+  import Button from 'primevue/button';
+
   import ProjectSection from '../components/ProjectSection.vue';
   import IntroSection from '../components/IntroSection.vue';
   const isMenuOpen = ref(false);
@@ -48,7 +53,7 @@
 
   const closeMenuFromItem = (event: MouseEvent) => {
     const target = event.target as HTMLElement;
-    if (target.tagName === 'A' || target.closest('a')) {
+    if (target.tagName === 'A' || target.closest('a') || target.closest('button')) {
       if (isMenuOpen.value) {
         isMenuOpen.value = false;
       }

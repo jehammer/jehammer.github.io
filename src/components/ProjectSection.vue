@@ -28,7 +28,7 @@
             </v-card-actions>
           </v-card>
         </v-col cols="auto">
-        <!--Bridge-->
+        <!--Bridge--/> -- TEMPORARILY COMMENTED OUT AS THIS IS NOT IN ACTIVE DEVELOPMENT
         <v-col cols="auto">
           <v-card variant="elevated" class="mx-auto" max-width="344" color="indigo">
             <v-card-item>
@@ -48,7 +48,7 @@
               </v-chip>
             </v-card-actions>
           </v-card>
-        </v-col>
+        </v-col> -->
         <!--BOK Website-->
         <v-col cols="auto">
           <v-card variant="elevated" class="mx-auto" max-width="344" color="indigo">

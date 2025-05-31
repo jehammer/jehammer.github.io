@@ -8,7 +8,7 @@ import AnimateOnScroll from 'primevue/animateonscroll';
 import { library } from '@fortawesome/fontawesome-svg-core';
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faBluesky } from '@fortawesome/free-brands-svg-icons';
 // @ts-ignore
 import router from './router/index.js';
 // Vuetify
@@ -19,6 +19,8 @@ import * as directives from 'vuetify/directives';
 
 /* add icons to the library */
 library.add(faGithub);
+library.add(faLinkedin);
+library.add(faBluesky);
 
 const vuetify = createVuetify({
   components,
