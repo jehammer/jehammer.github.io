@@ -10,10 +10,12 @@ html, body, #app {
   overflow: hidden;
   -webkit-perspective: 1500px;
   perspective: 1500px;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .st-pusher {
   position: relative;
+   background-color: #242424;
   left: 0;
   z-index: 99;
   height: 100%;
@@ -46,6 +48,10 @@ html, body, #app {
 .st-menu-open .st-pusher {
   -webkit-transform: translate3d(100px, 0, -600px) rotateY(-20deg);
   transform: translate3d(100px, 0, -600px) rotateY(-20deg);
+}
+
+.st-menu-open.st-container {
+  background-color: #444;
 }
 
 .st-menu-open .st-menu {
