@@ -150,7 +150,6 @@ export default {
 .detail {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
 }
 
 .card-wrapper {
@@ -178,7 +177,7 @@ export default {
   background: #111;
   border: 1px solid #222;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1rem;
 
   display: flex;
   flex-direction: column;
