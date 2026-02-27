@@ -11,7 +11,8 @@
           <div id="st-trigger-effects" class="column">
             <button @click="toggleMenu" data-effect="st-effect">Menu</button>
             <div class="wrapper-class">
-              <DetailsCard />
+              <intro-section />
+              <project-section />
             </div>
           </div>
         </div>
@@ -22,8 +23,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
+import Button from 'primevue/button';
 
-import DetailsCard from '../components/CardSection.vue';
+import ProjectSection from '../components/ProjectSection.vue';
+import IntroSection from '../components/IntroSection.vue';
 import NavSection from '../components/NavSection.vue';
 const isMenuOpen = ref(false);
 const pusherElementRef = ref<HTMLElement | null>(null);

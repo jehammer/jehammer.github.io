@@ -1,29 +1,35 @@
 <template>
   <div class="intro">
-    <div id='intro-top' :class="introTop" @animationend="animateHammer">
-        <h1>Joshua Hammer</h1><h1 id="intro-hammer" :class="introHammer" :style="{ visibility: isVisible ? 'visible' : 'hidden' }">&#128296;</h1>
+    <div id="intro-top" :class="introTop" @animationend="animateHammer">
+      <h1>Joshua Hammer</h1>
+      <h1
+        id="intro-hammer"
+        :class="introHammer"
+        :style="{ visibility: isVisible ? 'visible' : 'hidden' }"
+      >
+        &#128296;
+      </h1>
     </div>
     <div id="intro-bottom" :class="introBottom">
       <h2>Software Engineer</h2>
       <p>The best way to squash bugs, is with a Hammer!</p>
     </div>
   </div>
-    <!--<div class="card">
+  <!--<div class="card">
         <Splitter style="height: 300px" class="mb-5">
             <SplitterPanel class="flex align-items-center justify-content-center"> Panel 1 </SplitterPanel>
             <SplitterPanel class="flex align-items-center justify-content-center"> Panel 2 </SplitterPanel>
         </Splitter>
     </div>-->
 </template>
-      
+
 <script lang="ts">
 //import Splitter from 'primevue/splitter';
 //import SplitterPanel from 'primevue/splitterpanel';
 import { onMounted, ref } from 'vue';
 export default {
-  components: { },
+  components: {},
   setup() {
-;
     const introTop = ref('animate__animated animate__zoomInLeft');
     const introBottom = ref('animate__animated animate__zoomInRight');
     const introHammer = ref();
@@ -32,25 +38,21 @@ export default {
     const animateHammer = () => {
       introHammer.value = 'animate__animated animate__rotateInDownRight';
       isVisible.value = true;
-    }
+    };
 
-
-    onMounted(() =>{
-    })
-
+    onMounted(() => {});
 
     return {
       animateHammer,
       introTop,
       introBottom,
       introHammer,
-      isVisible
-
-    }
-  }
-}
+      isVisible,
+    };
+  },
+};
 </script>
-    
+
 <style scoped>
 .intro {
   display: flex;
@@ -70,7 +72,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
@@ -98,5 +100,5 @@ export default {
     display: inline-block;
   }
 }
-
-</style>./IntroSection.vue
+</style>
+./IntroSection.vue
