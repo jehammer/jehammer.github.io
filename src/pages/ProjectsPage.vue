@@ -23,7 +23,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
-import Button from 'primevue/button';
 
 import ProjectSection from '../components/ProjectSection.vue';
 import IntroSection from '../components/IntroSection.vue';

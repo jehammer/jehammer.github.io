@@ -140,6 +140,7 @@ export default {
       changeCursor,
       handleItemClick,
       route,
+      props,
     };
   },
 };
