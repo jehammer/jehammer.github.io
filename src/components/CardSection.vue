@@ -80,12 +80,7 @@ export default {
       isVisible.value = true;
     };
 
-    onMounted(() => {
-      // slight delay
-      setTimeout(() => {
-        isVisible.value = true;
-      }, 150);
-    });
+    onMounted(() => {});
 
     const name = ref('Joshua Hammer');
     const title = ref('Software Engineer');
