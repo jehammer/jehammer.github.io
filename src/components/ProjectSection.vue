@@ -22,7 +22,7 @@
               Discord Bot designed to manage rosters of players for endgame content and provide other functions for user engagement. Moving to AWS currently.
             </v-card-text>
             <v-card-actions>
-              <v-chip clickable href="https://github.com/jehammer/BOKBot" target="_blank" class="d-flex align-center" color="white" variant="outlined">
+              <v-chip clickable href="https://github.com/jehammer/bokbot" target="_blank" class="d-flex align-center" color="white" variant="outlined">
                 <font-awesome-icon :icon="['fab', 'github']"/>
               </v-chip>
             </v-card-actions>
@@ -64,7 +64,7 @@
               Front-End Website written in TypeScript and Vue3 to allow for more advanced interfacing with BOKBot and its systems from users.
             </v-card-text>
             <v-card-actions>
-              <v-chip clickable href="https://github.com/Breath-Of-Kynareth/breath-of-kynareth.github.io" target="_blank" class="d-flex align-center" color="white" variant="outlined">
+              <v-chip clickable href="https://github.com/jehammer/bok-site" target="_blank" class="d-flex align-center" color="white" variant="outlined">
                 <font-awesome-icon :icon="['fab', 'github']"/>
               </v-chip>
             </v-card-actions>
